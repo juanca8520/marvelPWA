@@ -17,7 +17,7 @@ export default class Heroes extends React.Component {
                 return res.json();
             })
             .then(res=>{
-                console.log(res.json())
+                console.log(res.value.json());
                 this.setState({ heroes: res });
                 localStorage.setItem('heroes', res);
             })
